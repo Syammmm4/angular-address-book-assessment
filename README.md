@@ -38,7 +38,6 @@ This project demonstrates enterprise-level web development skills by utilizing t
 * **Malaysian Context:** The mock data and state selection dropdowns have been specifically localized to reflect Malaysian addresses and states.
 
 ### Demonstration (Angular)
-*(Place your screenshot or video link for the Angular version here)*
 
 ![Angular Version Screenshot](./angular-screenshot.png)
 
