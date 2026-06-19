@@ -16,7 +16,6 @@ This project demonstrates core web development skills using pure HTML, CSS, and 
 * **Local Data Management:** Data is processed and managed effectively within the client-side session.
 
 ### Demonstration (JavaScript)
-*(Place your screenshot or video link for the JavaScript version here)*
 
 ![JavaScript Version Screenshot](./js-screenshot.png)
 
