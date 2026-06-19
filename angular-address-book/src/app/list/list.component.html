@@ -1,0 +1,45 @@
+<div class="list-container">
+  <dx-data-grid
+    [dataSource]="entries()"
+    [showBorders]="true"
+    [hoverStateEnabled]="true"
+    (onRowClick)="onRowClick($event)">
+
+    <dxo-toolbar>
+      <dxi-item location="before">
+        <div class="toolbar-label">Address Book</div>
+      </dxi-item>
+      <dxi-item location="after">
+        <dx-button text="Add" type="default" icon="plus" (onClick)="onAddClick()"></dx-button>
+      </dxi-item>
+    </dxo-toolbar>
+
+    <dxi-column dataField="name" caption="Name"></dxi-column>
+    <dxi-column dataField="email" caption="Email"></dxi-column>
+    <dxi-column dataField="phone" caption="Phone"></dxi-column>
+    <dxi-column caption="Address" cellTemplate="addressTemplate"></dxi-column>
+    <dxi-column type="buttons" [width]="100">
+      <dxi-button hint="Delete" icon="trash" [onClick]="onDeleteClick"></dxi-button>
+    </dxi-column>
+
+    <div *dxTemplate="let data of 'addressTemplate'">
+      {{ data.data.street ? data.data.street + ', ' : '' }}{{ data.data.state }} {{ data.data.postcode }}
+    </div>
+
+  </dx-data-grid>
+
+  <dx-popup
+    [(visible)]="isPopupVisible"
+    [width]="500"
+    height="auto"
+    title="Address Book Entry">
+    <div *dxTemplate="let data of 'content'">
+      <app-modal
+        *ngIf="isPopupVisible"
+        [data]="selectedRowData"
+        (save)="onModalSave($event)"
+        (cancel)="onModalCancel()">
+      </app-modal>
+    </div>
+  </dx-popup>
+</div>

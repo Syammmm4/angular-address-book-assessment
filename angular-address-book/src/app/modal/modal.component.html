@@ -1,0 +1,47 @@
+<form [formGroup]="form" class="modal-form">
+  <div class="field">
+    <label>Name</label>
+    <dx-text-box formControlName="name"></dx-text-box>
+    <div class="error" *ngIf="form.get('name')?.touched && form.get('name')?.hasError('required')">Name is required</div>
+  </div>
+  
+  <div class="field">
+    <label>Email</label>
+    <dx-text-box formControlName="email"></dx-text-box>
+    <div class="error" *ngIf="form.get('email')?.touched && form.get('email')?.hasError('email')">Invalid email format</div>
+  </div>
+  
+  <div class="field">
+    <label>Phone</label>
+    <dx-text-box formControlName="phone"></dx-text-box>
+    <div class="error" *ngIf="form.get('phone')?.touched && form.get('phone')?.hasError('pattern')">Cannot contain letters</div>
+  </div>
+  
+  <div class="field">
+    <label>Street</label>
+    <dx-text-box formControlName="street"></dx-text-box>
+  </div>
+  
+  <div class="field">
+    <label>State</label>
+    <dx-select-box [items]="states" formControlName="state"></dx-select-box>
+  </div>
+  
+  <div class="field">
+    <label>Postcode</label>
+    <dx-text-box formControlName="postcode"></dx-text-box>
+    <div class="error" *ngIf="form.get('postcode')?.touched && form.get('postcode')?.hasError('pattern')">Postcode must be number only</div>
+  </div>
+  
+  <div class="field">
+    <label>Description</label>
+    <dx-text-box formControlName="description"></dx-text-box>
+  </div>
+  
+  <div class="actions">
+    <dx-button *ngIf="mode === 'Create'" text="Create" type="success" [disabled]="form.invalid" (onClick)="onSave()"></dx-button>
+    <dx-button *ngIf="mode === 'View'" text="Edit" type="default" (onClick)="onEdit()"></dx-button>
+    <dx-button *ngIf="mode === 'Edit'" text="Save" type="success" [disabled]="form.invalid" (onClick)="onSave()"></dx-button>
+    <dx-button text="Cancel" type="normal" (onClick)="onCancel()"></dx-button>
+  </div>
+</form>

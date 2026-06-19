@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📖 Address Book</h1>
+        
+        <section class="form-section">
+            <h2>Add New Contact</h2>
+            <form id="contactForm">
+                <div class="form-grid">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email Address" required>
+                        </div>
+                    </div>
+
+                    <div class="form-col">
+                        <h3 class="section-subheading">Address</h3>
+                        <div class="form-group">
+                            <input type="text" id="street" placeholder="Street" required>
+                        </div>
+                        <div class="form-group-row">
+                            <input type="text" id="state" placeholder="State" required>
+                            <input type="text" id="postcode" placeholder="Postcode" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group textarea-group">
+                    <textarea id="description" placeholder="Description/Notes" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Add Contact +</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Contact List</h2>
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="🔍 Search contacts by name...">
+            </div>
+            <div id="contactList" class="contact-list"></div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

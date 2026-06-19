@@ -1,0 +1,199 @@
+/* Core Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #e4ebf1; /* Soft slate/light blue gradient vibe */
+    color: #1a202c;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #0f172a;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+/* Modern Card Sections */
+section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Form Layout Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+.form-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.section-subheading {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #334155;
+}
+
+/* Input Fields & Fields Row */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 12px;
+}
+
+.textarea-group {
+    margin-top: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #334155;
+    transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus {
+    background-color: #ffffff;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    outline: none;
+}
+
+/* Submit Button */
+.btn-submit {
+    background-color: #1e6b7b;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #154d59;
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* Pill-Shaped Search Bar */
+.search-container {
+    margin-bottom: 25px;
+}
+
+#searchBar {
+    border-radius: 50px;
+    padding: 14px 24px;
+    background: #edf2f7;
+    border: 1px solid #cbd5e1;
+}
+
+/* Contact Render Cards */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.contact-card p {
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+/* Functional Clean Delete Button */
+.btn-delete {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f1f5f9;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+    background-color: #fee2e2;
+    color: #ef4444;
+    border-color: #fca5a5;
+}
+
+.no-contacts {
+    text-align: center;
+    color: #94a3b8;
+    font-style: italic;
+    padding: 30px;
+}
